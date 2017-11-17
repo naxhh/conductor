@@ -1,2 +1,4 @@
 conductor
 vendor/
+_vendor*
+*.tar.gz

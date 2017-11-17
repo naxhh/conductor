@@ -1,0 +1,28 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: conductor
+  labels:
+    app: conductor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: conductor
+  template:
+    metadata:
+      labels:
+        app: conductor
+    spec:
+      containers:
+        - name: conductor
+          image: conductor:v1
+          ports:
+            - containerPort: 8080
+          volumeMounts:
+            - name: dockersocket
+              mountPath: /var/run/docker.sock
+      volumes:
+        - hostPath:
+            path: /var/run/docker.sock
+          name: dockersocket
