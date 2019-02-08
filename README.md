@@ -12,7 +12,8 @@ Is in charge of:
 
 ## PoC
 
-This is a PoC for a deployment systeme similar to `now`
+This is a PoC for a deployment systeme similar to `now`.
+It was a 1day lab in order to get ideas on how to improve the nodejs deployment.
 
 
 ### Main goal
